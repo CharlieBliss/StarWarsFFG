@@ -1,3 +1,10 @@
+`2.1.0`
+* Compatibility:
+  * Updated for Foundry VTT v14 (verified on build 369). This version requires Foundry v14 and no longer runs on v13
+    * Active Effects use the v14 data format (`system.changes`, string change types, new durations); weapons and armour still only apply their effects while equipped
+    * Rolls use the v14 message modes (public, GM, blind, self) instead of the old roll modes
+    * Combat tracker and actor sheet context menus updated for the v14 menu format
+
 `2.0.4`
 * Features:
   * Added a compendium browser to search and filter items across all world compendiums! ([#2267](https://github.com/StarWarsFoundryVTT/StarWarsFFG/pull/2267), [@KamiliaBlow](https://github.com/KamiliaBlow))
