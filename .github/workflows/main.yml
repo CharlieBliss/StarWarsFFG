@@ -138,6 +138,8 @@ jobs:
                   body: ${{ github.event.release.body }}
             - name: Publish System to FoundryVTT Website
               id: publish-to-foundry-website
+              # forks have no PACKAGE_TOKEN and must not publish over the official listing
+              if: github.repository == 'StarWarsFoundryVTT/StarWarsFFG'
               uses: cs96and/FoundryVTT-release-package@v1
               with:
                   package-token: ${{ secrets.PACKAGE_TOKEN }}
