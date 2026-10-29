@@ -62,6 +62,10 @@ on:
 jobs:
     build:
         runs-on: ubuntu-latest
+        # attaching system.json and system.zip to the release needs write access,
+        # which repos with read-only default workflow permissions (e.g. forks) do not grant
+        permissions:
+            contents: write
         steps:
             - name: Checkout Repository
               uses: actions/checkout@v3
